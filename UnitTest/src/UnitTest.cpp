@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "MathLib.h"
+#include "..\..\Euler\src\Euler.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace MathLibTesting
@@ -124,7 +125,10 @@ namespace MathLibTesting
 			Assert::AreEqual(expected, result);
 		}
 	};
+}
 
+namespace EulerTesting 
+{
 	TEST_CLASS(Euler1) {
 		TEST_METHOD(Euler1Finished) {
 			int expected = 233168;
@@ -143,4 +147,13 @@ namespace MathLibTesting
 			Assert::AreEqual(expected, result);
 		}
 	};
+
+	TEST_CLASS(Euler3) {
+		TEST_METHOD(Euler3Finished) {
+			int expected = 6857;
+			int result = Euler::Solution3();
+			Assert::AreEqual(expected, result);
+		}
+	};
+
 }
